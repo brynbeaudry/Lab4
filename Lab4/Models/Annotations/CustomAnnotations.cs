@@ -25,10 +25,12 @@ namespace Lab4.Models.Annotations
             char[] delims = { ' ' };
             if (name.Split(delims).Length > _n)
             {
+                ErrorMessage = $"The number of words cannot exceed {_n}";
                 return false;
             }
             return result;
-        }
+
+    }
 
     }
 

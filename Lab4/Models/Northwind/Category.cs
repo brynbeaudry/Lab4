@@ -11,7 +11,8 @@ namespace Lab4.Models.Northwind
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,8 +20,9 @@ namespace Lab4.Models.Northwind
         {
             this.Products = new HashSet<Product>();
         }
-    
+        [Display(Name = "Category")]
         public int CategoryID { get; set; }
+        [Display(Name="Category")]
         public string CategoryName { get; set; }
         public string Description { get; set; }
         public byte[] Picture { get; set; }
